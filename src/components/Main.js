@@ -2,6 +2,10 @@ import food from "../assets/food/food1.png";
 import greek from "../assets/food/greek-salad.webp";
 import bruschetta from "../assets/food/bruschetta.jpeg";
 import lemon from "../assets/food/lemon-dessert.webp";
+import pers1 from "../assets/testimonials/pers1.jpg";
+import pers2 from "../assets/testimonials/pers2.jpg";
+import pers3 from "../assets/testimonials/pers3.jpg";
+import pers4 from "../assets/testimonials/pers4.jpg";
 
 function Main({ setPage }) {
   return (
@@ -66,6 +70,60 @@ function Main({ setPage }) {
           </div>
         </div>
       </section>
+
+          {/* TESTIMONIALS */}
+<section className="testimonials">
+  <h2>Testimonials</h2>
+  <div className="testimonial-cards">
+    {/* CARD 1 */}
+    <div className="testimonial-card">
+      <img src={pers1} alt="Customer 1" />
+      <div className="testimonial-info">
+        <p className="testimonial-name">Maria R.</p>
+        <p className="testimonial-rating">★★★★★</p>
+        <p className="testimonial-text">
+          Amazing food and friendly staff! The Greek salad is my favorite.
+        </p>
+      </div>
+    </div>
+
+    {/* CARD 2 */}
+    <div className="testimonial-card">
+      <img src={pers2} alt="Customer 2" />
+      <div className="testimonial-info">
+        <p className="testimonial-name">John D.</p>
+        <p className="testimonial-rating">★★★★★</p>
+        <p className="testimonial-text">
+          The ambiance is perfect and the lemon dessert is to die for.
+        </p>
+      </div>
+    </div>
+
+    {/* CARD 3 */}
+    <div className="testimonial-card">
+      <img src={pers3} alt="Customer 3" />
+      <div className="testimonial-info">
+        <p className="testimonial-name">Sofia L.</p>
+        <p className="testimonial-rating">★★★★☆</p>
+        <p className="testimonial-text">
+          Great experience, I will definitely come back with friends!
+        </p>
+      </div>
+    </div>
+
+    {/* CARD 4 */}
+    <div className="testimonial-card">
+      <img src={pers4} alt="Customer 4" />
+      <div className="testimonial-info">
+        <p className="testimonial-name">Alex P.</p>
+        <p className="testimonial-rating">★★★★★</p>
+        <p className="testimonial-text">
+          Delicious meals and excellent service. Highly recommended!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   );
 }
