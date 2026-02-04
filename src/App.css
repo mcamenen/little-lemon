@@ -1,38 +1,303 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #edefee;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* NAV */
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-list li {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* MAIN */
+.main {
+  width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: #495e57; /* vert Little Lemon */
+  padding: 3rem 2rem;
+}
+
+/* CONTENEUR */
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* TEXTE */
+.hero-text h1 {
+  color: #f4ce14; /* jaune */
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-text h2 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.hero-text p {
+  color: white;
+  max-width: 350px;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+}
+
+.hero-text button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-top: 2rem; /* effet “flottant” */
+}
+
+/* SPECIALS SECTION */
+.specials {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header specials */
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.specials-header h2 {
+  color: #495e57;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.specials-header button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Cards grid */
+.specials-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Individual card */
+.card {
+  background-color: #edefee;
+  border-radius: 12px;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HEADER DE LA CARTE : nom + prix */
+.card-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* nom à gauche, prix à droite */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.card-header h3 {
+  margin: 0;
+  color: #495e57;
+  font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-header .price {
+  margin: 0;
+  font-weight: bold;
+  color: #495e57;
+  font-size: 1.1rem;
+}
+
+/* DESCRIPTION */
+.card-description {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0.5rem 0 0 0;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* BOOKING PAGE */
+.booking-page {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.booking-page h1 {
+  color: #495e57;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.booking-page p {
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* FORM */
+.booking-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.booking-form label {
+  font-weight: bold;
+  color: #495e57;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.booking-form button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 0.75rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 0 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between; /* logo à gauche, infos à droite */
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #edefee;
+  flex-wrap: wrap; /* pour mobile */
+  gap: 1rem;
+}
+
+/* Logo */
+.footer-logo img {
+  height: 50px;
+}
+
+/* Infos */
+.footer-info {
+  text-align: right;
+  line-height: 1.5;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image img {
+    margin-top: 1rem;
+  }
+
+  .card img {
+    height: 250px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .specials-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .specials-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 }

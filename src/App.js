@@ -1,15 +1,17 @@
-import React from "react";
-import Header from "./Header";
-import Nav from "./Nav";
-import Main from "./Main";
-import Footer from "./Footer";
+import { useState } from "react";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import BookingPage from "./components/BookingPage";
+import Footer from "./components/Footer";
 
 function App() {
+  const [page, setPage] = useState("home");
+
   return (
     <>
-      <Header />
-      <Nav />
-      <Main />
+      <Header setPage={setPage} />
+      {page === "home" && <Main setPage={setPage} />}
+      {page === "reservations" && <BookingPage />}
       <Footer />
     </>
   );
